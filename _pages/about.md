@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: MSc. Student @ <a href='https://github.com/LUMIA-Group'>LUMIA Group</a> · Shanghai Jiao Tong University
+subtitle: LLM Researcher @ <a href='https://github.com/LUMIA-Group'>LUMIA Group</a> · Shanghai Jiao Tong University
 # <a href='mailto:maximus.cao@outlook.com'>maximus.cao@outlook.com</a>
 
 profile:

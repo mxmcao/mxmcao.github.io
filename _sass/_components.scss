@@ -169,6 +169,51 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Social (header/top)
+
+.header-social {
+  margin-top: -1rem;
+  margin-bottom: 0.5rem;
+
+  .contact-icons {
+    font-size: 1.5rem;
+
+    a {
+      margin-right: -0.3rem;
+
+      img {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-bottom: 0;
+      }
+
+      svg {
+        width: 1.3rem;
+        height: 1.5rem;
+        margin-bottom: 0;
+
+        image {
+          width: 1.3rem;
+          height: 1.3rem;
+        }
+      }
+
+      i::before {
+        color: var(--global-text-color);
+        transition-property: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        i::before {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+}
+
 // Social (bottom)
 
 .social {

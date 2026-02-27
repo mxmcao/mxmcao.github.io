@@ -11,17 +11,14 @@
               {%- assign badge_bg = site.data.venues[entry.abbr].color -%}
             {%- endif -%}
             <div class="pub-venue-badge" style="background-color: {{ badge_bg }};">
-            
-            {% comment %} Keep the venue to the same style {% endcomment %}
-            
-            <em style="font-family: sans-serif; font-weight: 700; font-style: normal; color: white; font-size: 0.8rem;">
-              {%- if site.data.venues[entry.abbr] and site.data.venues[entry.abbr].url -%}
-                <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}{% if entry.year %} {{ entry.year }}{% endif %}</a>
-              {%- else -%}
-                {{- entry.abbr -}}{% if entry.year %} {{ entry.year }}{% endif %}
-              {%- endif -%}
+              <em style="font-family: sans-serif; font-weight: 700; font-style: normal; color: white; font-size: 0.8rem;">
+                {%- if site.data.venues[entry.abbr] and site.data.venues[entry.abbr].url -%}
+                  <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}{% if entry.year %} {{ entry.year }}{% endif %}</a>
+                {%- else -%}
+                  {{- entry.abbr -}}{% if entry.year %} {{ entry.year }}{% endif %}
+                {%- endif -%}
+              </em>
             </div>
-            </em>
           {%- endif -%}
           {% if entry.preview contains '://' %}
             <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
@@ -104,10 +101,10 @@
           {%- if forloop.last and author_array_limit == author_array_size %}and {% endif -%}
         {% endif %}
         {%- if author_is_self -%}
-          <strong style="font-size: 1.05em;">
-            {{- author.first }}
-            {{ author_last_html -}}
-          </strong>
+            <span style="font-weight: 600; font-size: 1em; font-style: normal; color: #1c1c1d;">
+                {{- author.first }}
+                {{ author_last_html -}}
+            </span>
         {%- else -%}
           {%- if coauthor_url -%}
             <a href="{{ coauthor_url }}">
