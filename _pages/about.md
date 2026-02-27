@@ -63,7 +63,10 @@ social: true # includes social icons at the bottom of the page
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  limit: 8 # leave blank to include all the news in the `_news` folder
+  highlight:
+    enabled: true
+    text: "🎓 <strong>Actively seeking Job Opportunities</strong> — Graduating in <strong>March 2027</strong>. Looking for internship & full-time positions at <strong><span style='color: var(--global-theme-color)'>Any LLM foundation model teams</span></strong>. Reach out if interested!"
 
 latest_posts:
   enabled: false
@@ -80,11 +83,11 @@ I've had internships at [Microsoft](https://www.microsoft.com/en-us/aprd/aboutus
 
 My core research areas include:
 
-* ***Next-Gen LLM Architectures:*** Exploring latent memory mechanisms in specific.
+* **Next-Gen LLM Architectures:** Exploring latent memory mechanisms in specific.
 
     [[Memory Decoder](https://arxiv.org/abs/2508.09874) & [MLP Memory](https://arxiv.org/abs/2508.01832)]
-* ***Continual Learning:*** Unifying training and testing dynamics as a single problem.
-* ***RL-Enhanced Pre-training:*** Integrating RL into pre-training pipeline.
+* **Continual Learning:** Unifying training and testing dynamics as a single problem.
+* **RL-Enhanced Pre-training:** Integrating RL into pre-training pipeline.
 
 <p class="section-title">🤝 Let's Connect</p>
 

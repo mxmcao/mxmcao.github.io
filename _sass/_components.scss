@@ -173,7 +173,7 @@ ul.task-list input[type="checkbox"] {
 
 .header-social {
   margin-top: -1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
 
   .contact-icons {
     font-size: 2.2rem;
@@ -301,16 +301,92 @@ ul.task-list input[type="checkbox"] {
 .post article .section-title {
   font-size: 1.1rem;
   font-weight: 450;
-  margin-top: 0rem;
-  margin-bottom: 0rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 .post article h2 {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  
   padding-bottom: 0.4rem;
   background-image: linear-gradient(to right, color-mix(in srgb, var(--global-theme-color) 30%, transparent), transparent 45%);
   background-repeat: no-repeat;
   background-size: 100% 1px;
   background-position: bottom left;
+}
+
+// News highlight box (pinned notice above news list)
+
+.news-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--global-theme-color);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--global-theme-color) 8%, var(--global-bg-color)),
+    var(--global-bg-color) 70%
+  );
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--global-text-color);
+
+  .news-highlight-dot {
+    flex-shrink: 0;
+    width: 7px;
+    height: 7px;
+    margin-top: 0.42rem;
+    border-radius: 50%;
+    background-color: var(--global-theme-color);
+    animation: nh-pulse 2.2s ease-in-out infinite;
+  }
+
+  a {
+    color: var(--global-theme-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s ease;
+
+    &:hover {
+      border-bottom-color: var(--global-theme-color);
+    }
+  }
+}
+
+@keyframes nh-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+}
+
+// News table spacing (needs !important to override MDB's .table-sm rules)
+.news table.table-sm td,
+.news table.table-sm th {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+// Fix the publication margin problem: In _sass/_publications.scss, .publications has margin-top: 2rem. Since selected_papers.liquid wraps everything in <div class="publications">, there's 2rem of extra space between the "Selected Publications" h2 and the paper list — making it look like a bigger gap under the heading compared to News and About. Override it to 0
+
+.post article .publications {
+  margin-top: 0;
+}
+
+.post article .equal-contribution {
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  margin-top: -1rem;
+  margin-bottom: 0.2rem;
 }
 
 // Distill
