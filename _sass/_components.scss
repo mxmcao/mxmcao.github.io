@@ -176,7 +176,7 @@ ul.task-list input[type="checkbox"] {
   margin-bottom: 0.5rem;
 
   .contact-icons {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
 
     a {
       margin-right: -0.3rem;
@@ -288,6 +288,29 @@ ul.task-list input[type="checkbox"] {
   .wechat-modal > img {
     width: 100%;
   }
+}
+
+// About page section headings (About / News / Publications)
+
+.post article p,
+.post article ul {
+  line-height: 1.5;
+  margin-bottom: 0rem;
+}
+
+.post article .section-title {
+  font-size: 1.1rem;
+  font-weight: 450;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.post article h2 {
+  padding-bottom: 0.4rem;
+  background-image: linear-gradient(to right, color-mix(in srgb, var(--global-theme-color) 30%, transparent), transparent 45%);
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: bottom left;
 }
 
 // Distill

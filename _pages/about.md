@@ -71,10 +71,21 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-My research focuses on **parametric memory architectures** and **continual learning** for large language models (LLMs). I have published 2 papers as a (co-)first author at **NeurIPS 2025** and **ICLR 2026**.
+<p class="section-title">👋 Hi, I'm Jiaqi Cao. (Call me Max!)</p>
 
-My representative works, [Memory Decoder](https://github.com/LUMIA-Group/MemoryDecoder) and [MLP Memory](https://github.com/Rubin-Wei/MLPMemory), introduce a novel parametric memory paradigm and provide a preliminary exploration of decoupling reasoning capabilities from long-tail knowledge.
+I am a second-year Master’s student at **Shanghai Jiao Tong University (SJTU)**, where I also completed my B.E. degree. I am fortunate to be supervised by [Prof. Zhouhan Lin](https://hantek.github.io/).
+I've had internships at [Microsoft](https://www.microsoft.com/en-us/aprd/aboutus/team-cai) and [Shanghai AI Lab](https://www.shlab.org.cn/).
 
-I am well-versed in LLM pretraining, embedding models, and various RAG architectures, and am dedicated to mitigating LLM hallucinations and enabling continual learning.
+<p class="section-title">🔍 Research Interests</p>
 
-Previously, I interned at [Shanghai AI Lab](https://www.shlab.org.cn/) and [Microsoft Cloud + AI](https://azure.microsoft.com/).
+My core research areas include:
+
+* ***Next-Gen LLM Architectures:*** Exploring latent memory mechanisms in specific.
+
+    [[Memory Decoder](https://arxiv.org/abs/2508.09874) & [MLP Memory](https://arxiv.org/abs/2508.01832)]
+* ***Continual Learning:*** Unifying training and testing dynamics as a single problem.
+* ***RL-Enhanced Pre-training:*** Integrating RL into pre-training pipeline.
+
+<p class="section-title">🤝 Let's Connect</p>
+
+I am always open to academic discussions or potential collaborations. Please feel free to reach out!
