@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+<div id="particles-js"></div>
+
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
@@ -97,3 +99,37 @@ layout: default
     {% endif %}
   </article>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 800 } },
+      color: { value: "#aaaaaa" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3, random: true },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#aaaaaa",
+        opacity: 0.4,
+        width: 1
+      },
+      move: { enable: true, speed: 2, out_mode: "out" }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: false },
+        onclick: { enable: true, mode: "push" }
+      },
+      modes: {
+        push: { particles_nb: 4 }
+      }
+    },
+    retina_detect: true
+  });
+
+
+</script>
