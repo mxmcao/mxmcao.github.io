@@ -86,8 +86,8 @@ My core research areas include:
 * **Next-Gen LLM Architectures:** Exploring latent memory mechanisms in specific.
 
     [[Memory Decoder](https://arxiv.org/abs/2508.09874) & [MLP Memory](https://arxiv.org/abs/2508.01832)]
-* **Continual Learning:** Unifying training and testing dynamics as a single problem.
-* **RL-Enhanced Pre-training:** Integrating RL into pre-training pipeline.
+* **Continual Learning:** Exploring context-to-weight mechanisms to enable continual learning in LLMs.
+<!-- * **RL-Enhanced Pre-training:** Integrating RL into pre-training pipeline. -->
 
 <p class="section-title">🤝 Let's Connect</p>
 
