@@ -53,7 +53,7 @@ profile:
         
         <p class="contact-item">
             <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:maximus.cao@outlook.com" class="contact-link">maximus.cao@outlook.com</a>
+            <a href="mailto:maximus.cao@outlook.com" class="contact-link">maximus[dot]cao@outlook.com</a>
         </p>
     </div>
 
