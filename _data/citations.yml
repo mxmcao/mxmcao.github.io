@@ -1,11 +1,11 @@
 metadata:
-  last_updated: '2026-03-13'
+  last_updated: '2026-03-30'
 papers:
   e6ud78YAAAAJ:9yKSN-GCB0IC:
     citations: 11
     title: 'MLP Memory: A Retriever-Pretrained Memory for Large Language Models'
     year: '2025'
   e6ud78YAAAAJ:d1gkVwhDpl0C:
-    citations: 7
+    citations: 8
     title: 'Memory Decoder: A pretrained, plug-and-play memory for large language models'
     year: '2025'
