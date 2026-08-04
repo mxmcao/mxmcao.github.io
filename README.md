@@ -25,13 +25,16 @@ hugo --gc --minify --cleanDestinationDir
 
 The generated site is written to `public/`, which is intentionally ignored by Git.
 
-## Content status
+## Content and data
 
-The current pages are minimal placeholders. Information and academic integrations from the previous al-folio site are preserved in `prev-information/` but are not rendered by Hugo yet.
+- `content/_index.md` renders the academic profile, job-search banner, and news from `data/profile.yaml` and `data/news.yaml`.
+- `content/research.md` renders publications from `data/publications.yaml`; publication images remain preserved under `prev-information/` and are exposed through Hugo mounts.
+- `data/citations.yaml` is the fallback Google Scholar snapshot. Validate it locally with `python scripts/update_scholar_citations.py --check`.
+- `prev-information/` remains the read-only archive of the previous al-folio site and its personal/academic source material.
 
 ## Deployment
 
-Pushes to `main` trigger `.github/workflows/hugo.yml`, which builds the site and deploys the `public/` artifact to GitHub Pages. The repository's Pages source must be set to **GitHub Actions**.
+Pushes to `main`, manual runs, and the weekly schedule trigger `.github/workflows/hugo.yml`. The workflow attempts to refresh Google Scholar citation counts, falls back to the committed snapshot on failure, builds the site, and deploys the `public/` artifact to GitHub Pages. The repository's Pages source must be set to **GitHub Actions**.
 
 ## Jupyter Lab 使用
 
@@ -39,7 +42,9 @@ Pushes to `main` trigger `.github/workflows/hugo.yml`, which builds the site and
 
 ### 1. 在 JupyterLab Terminal 中安装
 
+```bash
 python -m pip install jupyter-server-proxy
+```
 
 安装后需要从平台界面重启整个 Jupyter 实例，仅刷新浏览器不够。
 
@@ -47,28 +52,36 @@ python -m pip install jupyter-server-proxy
 
 假设浏览器中的 JupyterLab 地址是：
 
+```text
 https://你的域名/siflow/changliu/jupyter/skyinfer/yshi02/jupyter-cpu/lab
+```
 
 那么代理地址就是：
 
+```text
 https://你的域名/siflow/changliu/jupyter/skyinfer/yshi02/jupyter-cpu/proxy/1313/
+```
 
 ### 3. 重启后运行 Hugo
 
 在 JupyterLab Terminal 执行，注意把“你的域名”换成浏览器地址里的实际域名：
 
+```bash
 cd /volume/yshi02/projects/mxmcao.github.io
 
 hugo server \
---bind 127.0.0.1 \
---port 1313 \
---appendPort=false \
---liveReloadPort 443 \
---baseURL "https://你的域名/siflow/changliu/jupyter/skyinfer/yshi02/jupyter-cpu/proxy/1313/"
+  --bind 127.0.0.1 \
+  --port 1313 \
+  --appendPort=false \
+  --liveReloadPort 443 \
+  --baseURL "https://你的域名/siflow/changliu/jupyter/skyinfer/yshi02/jupyter-cpu/proxy/1313/"
+```
 
 然后访问：
 
+```text
 https://你的域名/siflow/changliu/jupyter/skyinfer/yshi02/jupyter-cpu/proxy/1313/
+```
 
 保持运行 Hugo 的终端不要关闭，修改网页文件后会自动重新构建。停止预览时按 Ctrl+C。
 
