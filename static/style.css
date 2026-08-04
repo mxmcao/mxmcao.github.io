@@ -100,6 +100,7 @@ body {
 
 .home-profile__portrait img {
   width: 100%;
+  height: auto;
   aspect-ratio: 1;
   object-fit: cover;
   padding: 0;

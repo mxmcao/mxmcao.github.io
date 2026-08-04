@@ -39,7 +39,8 @@ Hugo Terminal 迁移后的首页仍是占位内容。本次从 `prev-information
 - `git diff --check`：通过，无空白错误。
 - `hugo --gc --minify --cleanDestinationDir --destination /tmp/mxmcao-home-stage`：通过，生成 10 个页面和 11 个静态文件。
 - 检查 `/tmp/mxmcao-home-stage/images/profile.png`：头像 mount 已正确发布。
-- 检查生成的 `index.html`：包含个人介绍、Console 导航、求职 banner、Recent News 和完整头像尺寸属性。
+- 检查生成的 `index.html`：包含个人介绍、Console 导航、求职 banner 和 Recent News。
+- Playwright 桌面/移动端截图复核发现 HTML 高度属性导致头像被纵向拉伸；移除冲突属性并增加 `height: auto` 后再次验证为方形显示。
 
 ## 已知风险或未验证内容
 
