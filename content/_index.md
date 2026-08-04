@@ -1,10 +1,6 @@
 +++
 title = "About"
-description = "Minimal placeholder for the future academic homepage."
+description = "Jiaqi Cao is an LLM researcher at Shanghai Jiao Tong University working on next-generation architectures, parametric memory, and continual learning."
 +++
 
-# Hello.
-
-This is a minimal Hugo Terminal site. Personal information from the previous website has been archived but is not rendered here yet.
-
-Use the navigation to inspect the placeholder Research and CV pages.
+{{< home-profile >}}

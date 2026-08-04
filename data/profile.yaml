@@ -1,0 +1,50 @@
+name: Jiaqi Cao
+preferred_name: Max
+headline: LLM Researcher at Shanghai Jiao Tong University
+affiliation:
+  label: LUMIA Group
+  url: https://github.com/LUMIA-Group
+about:
+  - >-
+    I am a second-year Master's student at **Shanghai Jiao Tong University
+    (SJTU)**, where I also completed my B.E. degree. I am fortunate to be
+    supervised by [Prof. Zhouhan Lin](https://hantek.github.io/).
+  - >-
+    I have held internships at
+    [Microsoft](https://www.microsoft.com/en-us/aprd/aboutus/team-cai) and
+    [Shanghai AI Lab](https://www.shlab.org.cn/).
+research_interests:
+  - title: Next-Generation LLM Architectures
+    description: >-
+      Exploring latent and parametric memory mechanisms, including
+      [Memory Decoder](https://arxiv.org/abs/2508.09874) and
+      [MLP Memory](https://arxiv.org/abs/2508.01832).
+  - title: Continual Learning
+    description: >-
+      Exploring context-to-weight mechanisms that enable continual learning in
+      large language models.
+closing: >-
+  I am always open to academic discussions and potential collaborations.
+  Please feel free to reach out.
+socials:
+  - label: Email
+    display: maximus[dot]cao@outlook.com
+    url: mailto:maximus.cao@outlook.com
+  - label: GitHub
+    display: mxmcao
+    url: https://github.com/mxmcao
+  - label: Google Scholar
+    display: Jiaqi Cao
+    url: https://scholar.google.com/citations?user=e6ud78YAAAAJ
+  - label: LinkedIn
+    display: jiaqi-cao-895a91204
+    url: https://www.linkedin.com/in/jiaqi-cao-895a91204/
+  - label: WeChat
+    display: maxmcao
+    url: weixin://dl/chat?maxmcao
+job_banner:
+  enabled: true
+  text: >-
+    **Actively seeking job opportunities** — Graduating in **March 2027** and
+    looking for internship and full-time positions with **LLM foundation model
+    teams**. Please reach out if interested.

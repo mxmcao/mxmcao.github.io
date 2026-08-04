@@ -1,0 +1,64 @@
+{{- $profile := site.Data.profile -}}
+<section class="home-profile" aria-labelledby="about-heading">
+  <div class="home-profile__intro">
+    <div class="home-profile__copy">
+      <p class="console-command" aria-hidden="true">$ cat about.md</p>
+      <h1 id="about-heading">Hi, I'm {{ $profile.name }}. <span class="home-profile__alias">Call me {{ $profile.preferred_name }}.</span></h1>
+      <p class="home-profile__headline">
+        {{ $profile.headline }} ·
+        <a href="{{ $profile.affiliation.url }}" rel="noopener noreferrer">{{ $profile.affiliation.label }}</a>
+      </p>
+      {{- range $profile.about }}
+        {{ . | markdownify }}
+      {{- end }}
+    </div>
+    <figure class="home-profile__portrait">
+      <img src="{{ "images/profile.png" | relURL }}" alt="Portrait of {{ $profile.name }}" width="800" height="800">
+    </figure>
+  </div>
+
+  <section aria-labelledby="interests-heading">
+    <p class="console-command" aria-hidden="true">$ cat research-interests.md</p>
+    <h2 id="interests-heading">Research interests</h2>
+    <ul class="research-interests">
+      {{- range $profile.research_interests }}
+        <li><strong>{{ .title }}:</strong> {{ .description | markdownify }}</li>
+      {{- end }}
+    </ul>
+  </section>
+
+  <section aria-labelledby="connect-heading">
+    <p class="console-command" aria-hidden="true">$ finger mxmcao</p>
+    <h2 id="connect-heading">Let's connect</h2>
+    {{ $profile.closing | markdownify }}
+    <ul class="social-links" aria-label="Contact and academic profiles">
+      {{- range $profile.socials }}
+        <li>
+          <span class="social-links__label">{{ .label }}</span>
+          <a href="{{ .url | safeURL }}"{{ if strings.HasPrefix .url "https://" }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .display }}</a>
+        </li>
+      {{- end }}
+    </ul>
+  </section>
+
+  <section class="news" aria-labelledby="news-heading">
+    <p class="console-command" aria-hidden="true">$ tail -n 3 news.log</p>
+    <h2 id="news-heading">Recent news</h2>
+    {{- with $profile.job_banner }}
+      {{- if .enabled }}
+        <aside class="job-banner" aria-label="Job search status">
+          <span aria-hidden="true">[OPEN TO WORK]</span>
+          <div>{{ .text | markdownify }}</div>
+        </aside>
+      {{- end }}
+    {{- end }}
+    <ol class="news-list">
+      {{- range site.Data.news }}
+        <li>
+          <time datetime="{{ .date }}">{{ time.Format "Jan 2006" .date }}</time>
+          <div>{{ .text | markdownify }}</div>
+        </li>
+      {{- end }}
+    </ol>
+  </section>
+</section>
