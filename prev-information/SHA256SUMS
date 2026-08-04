@@ -1,0 +1,16 @@
+# SHA-256 values captured from source files at commit 1aa6486.
+# Each line records the archived destination followed by its original path.
+c017e4322b5cf35934764cfbe2bb19faf838be92dcc70d3ab6b403ec34755e93  personal/about.md  (_pages/about.md)
+a8c6006eb80d872aeb843b9849cf838d477833957c24fe0f27f5888bd6898501  personal/socials.yml  (_data/socials.yml)
+f4fa7949a3f00348c2f86b67435f0642d631c97820c8dbd61130c659547d1fa3  personal/profile.png  (assets/img/profile/blue-profile.png)
+f86ee5f14f2684dd547fa96e023bc8319e80e8f5bc7180e36a0cf59a08d65fc8  personal/CV-2026.pdf  (assets/pdf/CV-2026.pdf)
+51180af0166281666dadeca7c54e298ca66c4a739f622d8d80073c0cd43fa175  personal/google1b099e71934f95d1.html  (google1b099e71934f95d1.html)
+87fe2272e692c61e67d07a016e185f1a0a0fe5ab0fe203e01ae43778247a52ef  publications/papers.bib  (_bibliography/papers.bib)
+726ee9c55a9d9b7b4ce390324437ca91a1d756ca70087d77160b029252c14a91  publications/citations.yml  (_data/citations.yml)
+72c6481e15010b370624aba72ac81ffc63a02b895eb14a9309936f7e29e6ab43  publications/venues.yml  (_data/venues.yml)
+7d4f6dcc93825bc57136b91b8ba6b2012dbc51d6a49f588f2c24acf68790eb78  publications/images/memory-decoder.png  (assets/img/publication_preview/memory-decoder.png)
+670075ae61e2fb126faa11e75594cf25277260d723d3885e05d87cfd7affb3ba  publications/images/mlp-memory.png  (assets/img/publication_preview/mlp-memory.png)
+ac5180bba730ffee2cbd2bcbade82075dc7699ad507f944da21f8c4df9ed8be6  academic-reference/source/update-citations.yml  (.github/workflows/update-citations.yml)
+33fbedaca6ad3cdd01e7a28e91983f8beb8eaa79e02308ffee010304769d56a5  academic-reference/source/update_scholar_citations.py  (bin/update_scholar_citations.py)
+c790049be02ea53f8fe76d4fd8bf0aac2d216a5fa18ec3528e5f418d7a3ea3f8  academic-reference/source/bib.liquid  (_layouts/bib.liquid)
+ccc3c175aab1467a03fcb21b509522658ea89506a57b76eebac42780535f293c  academic-reference/source/publications.scss  (_sass/_publications.scss)
