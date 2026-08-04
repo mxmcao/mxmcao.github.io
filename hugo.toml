@@ -40,25 +40,25 @@ copyright = ""
       words = "words"
 
       [languages.en.params.logo]
-        logoText = "mxmcao:~#"
+        logoText = "$ mxmcao"
         logoHomeLink = "/"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
         identifier = "about"
-        name = "about/"
+        name = "About"
         url = "/"
         weight = 1
 
       [[languages.en.menu.main]]
         identifier = "research"
-        name = "research/"
+        name = "Research"
         url = "/research/"
         weight = 2
 
       [[languages.en.menu.main]]
         identifier = "cv"
-        name = "cv/"
+        name = "CV"
         url = "/cv/"
         weight = 3
 

@@ -1,6 +1,2 @@
-<button class="theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme" aria-pressed="false" title="Toggle color theme">
-  <span class="theme-toggle__icon" aria-hidden="true"></span>
-</button>
-
 {{ $themeToggle := resources.Get "js/theme-toggle.js" | js.Build | minify | fingerprint }}
 <script src="{{ $themeToggle.RelPermalink }}" integrity="{{ $themeToggle.Data.Integrity }}"></script>
