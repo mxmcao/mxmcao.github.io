@@ -3,6 +3,8 @@ name: Deploy Hugo site to Pages
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "17 3 * * 1"
   workflow_dispatch:
 
 permissions:
@@ -33,6 +35,25 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-scholar.txt
+
+      - name: Install citation refresh dependencies
+        run: python -m pip install -r requirements-scholar.txt
+
+      - name: Refresh Google Scholar citation snapshot
+        id: citations
+        continue-on-error: true
+        run: timeout 120s python scripts/update_scholar_citations.py
+
+      - name: Report citation snapshot fallback
+        if: steps.citations.outcome == 'failure'
+        run: echo "::warning::Google Scholar refresh failed; building with the committed citation snapshot."
 
       - name: Setup Pages
         id: pages

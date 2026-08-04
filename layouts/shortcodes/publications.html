@@ -41,4 +41,7 @@
       </ol>
     </section>
   {{- end }}
+  {{- with site.Data.citations.metadata.last_updated }}
+    <p class="citation-updated">Citation counts last refreshed: <time datetime="{{ . }}">{{ . }}</time>.</p>
+  {{- end }}
 </div>

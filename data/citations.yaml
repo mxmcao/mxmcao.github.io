@@ -1,0 +1,13 @@
+scholar_user_id: e6ud78YAAAAJ
+metadata:
+  last_updated: "2026-08-04"
+  source: Google Scholar
+papers:
+  9yKSN-GCB0IC:
+    citations: 19
+    title: "MLP Memory: A Retriever-Pretrained Memory for Large Language Models"
+    year: "2025"
+  d1gkVwhDpl0C:
+    citations: 16
+    title: "Memory Decoder: A Pretrained, Plug-and-Play Memory for Large Language Models"
+    year: "2025"

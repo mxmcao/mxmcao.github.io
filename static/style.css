@@ -314,6 +314,16 @@ body {
   --publication-button-color: #286f9c;
 }
 
+.publication-button--citations {
+  --publication-button-color: #4a67a1;
+}
+
+.citation-updated {
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.8em;
+}
+
 :root.dark-mode .publication-button--arxiv,
 body.dark-mode .publication-button--arxiv {
   --publication-button-color: #ff8585;
@@ -336,6 +346,11 @@ body.dark-mode .publication-button--huggingface {
 body.dark-mode .publication-button--video,
 body.dark-mode .publication-button--website {
   --publication-button-color: #81c8f5;
+}
+
+:root.dark-mode .publication-button--citations,
+body.dark-mode .publication-button--citations {
+  --publication-button-color: #8ba9e8;
 }
 
 @keyframes console-cursor {
