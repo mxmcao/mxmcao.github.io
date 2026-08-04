@@ -1,0 +1,57 @@
+- year: 2026
+  papers:
+    - id: mlp-memory
+      title: "MLP Memory: A Retriever-Pretrained Memory for Large Language Models"
+      venue:
+        short: ICLR
+        name: International Conference on Learning Representations
+        year: 2026
+        url: https://iclr.cc/
+        color: "#0064b7"
+      authors:
+        - name: Rubin Wei
+          equal_contribution: true
+        - name: Jiaqi Cao
+          equal_contribution: true
+          self: true
+        - name: Jiarui Wang
+        - name: Jushi Kai
+        - name: Qipeng Guo
+        - name: Bowen Zhou
+        - name: Zhouhan Lin
+      preview: images/publications/mlp-memory.png
+      preview_alt: Diagram of the MLP Memory architecture
+      scholar_id: 9yKSN-GCB0IC
+      links:
+        arxiv: https://arxiv.org/abs/2508.01832
+        code: https://github.com/Rubin-Wei/MLPMemory
+        huggingface: https://huggingface.co/collections/Rubin-Wei/mlpmemory
+
+- year: 2025
+  papers:
+    - id: memory-decoder
+      title: "Memory Decoder: A Pretrained, Plug-and-Play Memory for Large Language Models"
+      venue:
+        short: NeurIPS
+        name: Advances in Neural Information Processing Systems
+        year: 2025
+        url: https://neurips.cc/
+        color: "#b31b1b"
+      authors:
+        - name: Jiaqi Cao
+          equal_contribution: true
+          self: true
+        - name: Jiarui Wang
+          equal_contribution: true
+        - name: Rubin Wei
+        - name: Qipeng Guo
+        - name: Kai Chen
+        - name: Bowen Zhou
+        - name: Zhouhan Lin
+      preview: images/publications/memory-decoder.png
+      preview_alt: Diagram of the Memory Decoder architecture
+      scholar_id: d1gkVwhDpl0C
+      links:
+        arxiv: https://arxiv.org/abs/2508.09874
+        code: https://github.com/LUMIA-Group/MemoryDecoder
+        huggingface: https://huggingface.co/collections/Clover-Hill/memorydecoder

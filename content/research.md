@@ -1,9 +1,7 @@
 +++
 title = "Research"
-description = "Placeholder research page."
+description = "Publications by Jiaqi Cao on parametric memory and next-generation large language model architectures."
 aliases = ["/publications/"]
 +++
 
-# Research
-
-Publication data and academic integrations will be migrated from the preserved source material in a later step.
+{{< publications >}}

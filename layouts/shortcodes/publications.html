@@ -1,0 +1,44 @@
+<div class="publications" aria-labelledby="publications-heading">
+  <p class="console-command" aria-hidden="true">$ ls publications/</p>
+  <h1 id="publications-heading">Publications</h1>
+
+  {{- range site.Data.publications }}
+    <section class="publication-year" aria-labelledby="year-{{ .year }}">
+      <h2 id="year-{{ .year }}">{{ .year }}</h2>
+      <ol class="publication-list">
+        {{- range .papers }}
+          <li class="publication-item" id="{{ .id }}">
+            <div class="publication-preview">
+              <a href="{{ .links.arxiv }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ .title }} on arXiv">
+                <img src="{{ .preview | relURL }}" alt="{{ .preview_alt }}" loading="lazy">
+              </a>
+              <a
+                class="publication-venue"
+                href="{{ .venue.url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="{{ printf "--venue-color: %s" .venue.color | safeCSS }}"
+              >{{ .venue.short }} {{ .venue.year }}</a>
+            </div>
+
+            <div class="publication-details">
+              <h3>{{ .title }}</h3>
+              <p class="publication-authors">
+                {{- range $index, $author := .authors -}}
+                  {{- if $index }}, {{ end -}}
+                  {{- if $author.self }}<strong>{{ $author.name }}</strong>{{ else }}{{ $author.name }}{{ end -}}
+                  {{- if $author.equal_contribution }}<sup>*</sup>{{ end -}}
+                {{- end -}}
+              </p>
+              <p class="publication-venue-name"><em>{{ .venue.name }}</em>, {{ .venue.year }}</p>
+              {{ partial "publication-buttons.html" . }}
+              {{- if collections.Where .authors "equal_contribution" true }}
+                <p class="publication-note"><sup>*</sup> Equal contribution</p>
+              {{- end }}
+            </div>
+          </li>
+        {{- end }}
+      </ol>
+    </section>
+  {{- end }}
+</div>

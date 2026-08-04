@@ -1,0 +1,25 @@
+{{- with .links }}
+  <div class="publication-buttons" aria-label="Resources for {{ $.title }}">
+    {{- with .arxiv }}
+      <a class="publication-button publication-button--arxiv" href="{{ . }}" target="_blank" rel="noopener noreferrer">arXiv</a>
+    {{- end }}
+    {{- with .pdf }}
+      <a class="publication-button publication-button--pdf" href="{{ . }}" target="_blank" rel="noopener noreferrer">PDF</a>
+    {{- end }}
+    {{- with .code }}
+      <a class="publication-button publication-button--code" href="{{ . }}" target="_blank" rel="noopener noreferrer">Code</a>
+    {{- end }}
+    {{- with .huggingface }}
+      <a class="publication-button publication-button--huggingface" href="{{ . }}" target="_blank" rel="noopener noreferrer">Hugging Face</a>
+    {{- end }}
+    {{- with .video }}
+      <a class="publication-button publication-button--video" href="{{ . }}" target="_blank" rel="noopener noreferrer">Video</a>
+    {{- end }}
+    {{- with .slides }}
+      <a class="publication-button publication-button--slides" href="{{ . }}" target="_blank" rel="noopener noreferrer">Slides</a>
+    {{- end }}
+    {{- with .website }}
+      <a class="publication-button publication-button--website" href="{{ . }}" target="_blank" rel="noopener noreferrer">Website</a>
+    {{- end }}
+  </div>
+{{- end }}
