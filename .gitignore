@@ -3,6 +3,8 @@
 /resources/_gen/
 /.hugo_build.lock
 .ipynb_checkpoints/
+__pycache__/
+*.py[cod]
 
 # Local tooling
 .DS_Store
