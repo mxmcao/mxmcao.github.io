@@ -342,87 +342,19 @@ body {
   margin-top: 2rem;
 }
 
-.academic-page-header {
-  margin: 0 0 1.25rem;
-}
-
-.academic-page .post-content {
-  margin-top: 0;
-}
-
-.academic-page-header__title-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem 0.65rem;
-  align-items: baseline;
-}
-
-.academic-page-header__prompt {
-  flex: 0 0 auto;
-  color: var(--accent);
-  font-size: 0.82rem;
-  font-weight: bold;
-  line-height: 1;
-}
-
-.academic-page-header__title {
-  margin: 0;
-  color: var(--foreground);
-  font-size: 1.35rem;
-  line-height: 1.2;
-}
-
-.academic-page-header__supplement {
-  margin: 0;
+.academic-page-header__title .publication-page__scholar {
+  margin-left: 0.85rem;
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.48em;
+  font-weight: normal;
   line-height: 1.35;
+  vertical-align: middle;
 }
 
-.academic-page-header__supplement a {
+.publication-page__scholar a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.16em;
-}
-
-.academic-page-header__divider {
-  display: grid;
-  grid-template-columns: max-content minmax(1rem, 1fr) max-content;
-  gap: 0.45rem;
-  align-items: center;
-  margin-top: 0.55rem;
-  color: var(--accent);
-}
-
-.academic-page-header__divider::before,
-.academic-page-header__divider::after {
-  font-size: 0.68rem;
-  font-weight: bold;
-  line-height: 1;
-}
-
-.academic-page-header__divider::before {
-  content: "[+]";
-}
-
-.academic-page-header__divider::after {
-  content: "[>]";
-}
-
-.academic-page-header__divider span {
-  position: relative;
-  height: 1px;
-  border-top: 1px dashed currentColor;
-}
-
-.academic-page-header__divider span::after {
-  position: absolute;
-  top: -2px;
-  right: 24%;
-  width: 4px;
-  height: 4px;
-  background: currentColor;
-  content: "";
 }
 
 .publication-toolbar {
@@ -766,12 +698,9 @@ body.dark-mode .publication-button--citations {
     width: min(100%, 340px);
   }
 
-  .academic-page-header__title-row {
-    align-items: flex-start;
-  }
-
-  .academic-page-header__supplement {
-    flex-basis: 100%;
+  .academic-page-header__title .publication-page__scholar {
+    display: inline-block;
+    margin: 0.35rem 0 0;
   }
 
   .publication-toolbar {
