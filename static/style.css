@@ -354,7 +354,7 @@ body {
 }
 
 .academic-page-header__title {
-  border-bottom: 1px dotted var(--border);
+  border-bottom: 2px dotted var(--accent);
   color: var(--foreground);
 }
 
