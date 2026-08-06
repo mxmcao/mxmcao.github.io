@@ -34,8 +34,11 @@ commit `ef275d18a51dabcd77902bb0b320e3f9c1721771` 为 Research 与 CV 引入了�
 
 ## 实际执行的测试和结果
 
-- 待执行。
+- `git diff --check`：通过，无空白错误。
+- `hugo --gc --minify --cleanDestinationDir --destination /tmp/mxmcao-academic-header-rollback-20260806-0844`：通过，生成 10 个页面、12 个静态文件和 2 个 alias。
+- 检查生成的 `/research/index.html` 与 `/cv/index.html`：每页均只有一个 H1，且 H1 使用 `post-title academic-page-header__title`；Research 继续输出 Google Scholar 链接。
+- 检查生成的主题 CSS：`post-title` 的双点线规则正常存在；源码和生成的站点自定义 CSS 均不再包含 academic prompt、divider、`[+]` 或 `[>]` 规则。
 
 ## 已知风险或未验证内容
 
-- 待完成构建和页面产物检查后更新。
+- 当前环境没有 Chromium、Chrome 或 Playwright 可执行文件，未进行浏览器截图复核。
