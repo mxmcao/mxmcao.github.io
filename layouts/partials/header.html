@@ -1,10 +1,19 @@
 <header class="header">
+  {{- $promptKey := "home" -}}
+  {{- if not .IsHome -}}
+    {{- with .File -}}
+      {{- $promptKey = .ContentBaseName -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $terminalCommand := index site.Data.terminal_prompts $promptKey | default site.Data.terminal_prompts.home -}}
   <div class="header__inner">
     <div class="header__logo">
       {{ partial "logo.html" . }}
     </div>
 
-    <span class="header__rail" aria-hidden="true"></span>
+    <span class="header__terminal" aria-hidden="true">
+      <span class="header__terminal-command">{{ $terminalCommand }}</span><span class="header__terminal-cursor"></span>
+    </span>
 
     <button class="theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme" aria-pressed="false" title="Toggle color theme">
       <span class="theme-toggle__icon" aria-hidden="true"></span>

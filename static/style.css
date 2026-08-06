@@ -49,16 +49,45 @@ body {
   font-weight: bold;
 }
 
-.header__rail {
+.header__terminal {
+  display: flex;
   flex: 1 1 auto;
+  align-items: center;
   min-width: 2rem;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    color-mix(in srgb, var(--accent) 70%, transparent),
-    color-mix(in srgb, var(--accent) 20%, transparent) 72%,
-    transparent
-  );
+  min-height: 1.75rem;
+  overflow: hidden;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.78rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.header__terminal-command {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header__terminal-cursor {
+  flex: 0 0 auto;
+  width: 0.48rem;
+  height: 1rem;
+  margin-left: 0.35rem;
+  background: var(--accent);
+  animation: terminal-cursor-blink 1.1s steps(1, end) infinite;
+}
+
+@keyframes terminal-cursor-blink {
+  0%,
+  48% {
+    opacity: 1;
+  }
+
+  49%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .navigation-menu__inner a {
@@ -665,8 +694,13 @@ body.dark-mode .publication-button--citations {
     gap: 0.65rem;
   }
 
-  .header__rail {
-    display: none;
+  .header__terminal {
+    font-size: 0.68rem;
+  }
+
+  .header__terminal-cursor {
+    width: 0.4rem;
+    height: 0.85rem;
   }
 
   .header__logo {
@@ -740,5 +774,9 @@ body.dark-mode .publication-button--citations {
 @media (prefers-reduced-motion: reduce) {
   body {
     transition: none;
+  }
+
+  .header__terminal-cursor {
+    animation: none;
   }
 }
