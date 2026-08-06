@@ -19,7 +19,7 @@
         - name: Qipeng Guo
         - name: Bowen Zhou
         - name: Zhouhan Lin
-      preview: images/publications/mlp-memory.png
+      preview: /images/publications/mlp-memory.png
       preview_alt: Diagram of the MLP Memory architecture
       scholar_id: 9yKSN-GCB0IC
       links:
@@ -48,7 +48,7 @@
         - name: Kai Chen
         - name: Bowen Zhou
         - name: Zhouhan Lin
-      preview: images/publications/memory-decoder.png
+      preview: /images/publications/memory-decoder.png
       preview_alt: Diagram of the Memory Decoder architecture
       scholar_id: d1gkVwhDpl0C
       links:

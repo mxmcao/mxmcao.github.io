@@ -97,7 +97,3 @@ copyright = ""
   [[module.mounts]]
     source = "prev-information/avatar/wechat.png"
     target = "static/images/wechat.png"
-
-  [[module.mounts]]
-    source = "prev-information/publications/images"
-    target = "static/images/publications"
