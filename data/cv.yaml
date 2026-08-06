@@ -18,18 +18,18 @@ experience:
     period: Jul 2026 – Present
     url: https://huggingface.co/IQuestLab
     focus: Pre-training research for foundation models.
-  - organization: NBG Lab
-    role: Research Intern
+  - organization: NBG LLM Lab
+    role: Pre-train/Post-train Intern
     period: Mar 2026 – Jun 2026
     url: https://huggingface.co/Nanbeige
-    focus: Compact language models and agentic capabilities.
+    focus: Model arch research and agentic capabilities.
   - organization: Shanghai AI Lab
     role: Research Intern
     period: Apr 2025 – Aug 2025
     url: https://www.shlab.org.cn/
     focus: Parametric memory and continual learning for LLMs.
-  - organization: Microsoft Cloud + AI (C+AI)
-    role: LLM Algorithm Intern
+  - organization: Microsoft
+    role: Research Intern
     period: Mar 2024 – Aug 2024
     url: https://www.microsoft.com/en-us/aprd/aboutus/team-cai
     focus: AKS diagnostic copilot and RAG retrieval optimization.
@@ -50,8 +50,8 @@ awards:
 
 skills:
   - label: Languages
-    value: English (TOEFL 109)
+    value: English (TOEFL 109) · French (B2)
   - label: Programming
     value: Python · C/C++
   - label: ML stack
-    value: PyTorch · Transformers · FAISS · RAG architectures
+    value: PyTorch · Transformers · Megatron · Slime
