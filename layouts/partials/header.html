@@ -18,7 +18,10 @@
     {{ end }}
   </div>
 
-  {{ if len $.Site.Menus }}
-    {{ partial "menu.html" . }}
-  {{ end }}
+  <div class="header__navigation">
+    {{ if len $.Site.Menus }}
+      {{ partial "menu.html" . }}
+    {{ end }}
+    {{ partial "header-socials.html" . }}
+  </div>
 </header>

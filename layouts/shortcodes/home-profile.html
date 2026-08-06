@@ -25,19 +25,6 @@
     </ul>
   </section>
 
-  <section class="home-profile__block" aria-labelledby="connect-heading">
-    <h2 id="connect-heading">Let's connect</h2>
-    {{ $profile.closing | markdownify }}
-    <ul class="social-links" aria-label="Contact and academic profiles">
-      {{- range $profile.socials }}
-        <li>
-          <span class="social-links__label">{{ .label }}</span>
-          <a href="{{ .url | safeURL }}"{{ if strings.HasPrefix .url "https://" }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .display }}</a>
-        </li>
-      {{- end }}
-    </ul>
-  </section>
-
   <section class="news home-profile__block" aria-labelledby="news-heading">
     <h2 id="news-heading">Recent news</h2>
     {{- with $profile.job_banner }}

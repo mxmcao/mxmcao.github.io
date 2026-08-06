@@ -1,0 +1,15 @@
+{{- with site.Data.profile.socials -}}
+  <ul class="header-socials" aria-label="Contact and academic profiles">
+    {{- range . }}
+      <li>
+        <a
+          class="header-socials__link"
+          href="{{ .url | safeURL }}"
+          aria-label="{{ .label }}: {{ .display }}"
+          title="{{ .label }}"
+          {{- if strings.HasPrefix .url "https://" }} target="_blank" rel="noopener noreferrer"{{ end -}}
+        >{{ partial "social-icon.html" . }}</a>
+      </li>
+    {{- end }}
+  </ul>
+{{- end -}}
