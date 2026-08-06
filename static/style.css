@@ -372,9 +372,28 @@ body {
   font-weight: bold;
 }
 
+.news-console-command {
+  margin: 0 0 0.65rem;
+  color: var(--accent);
+  font-size: 0.82em;
+}
+
 .job-banner p,
 .news-list p {
   margin: 0;
+}
+
+.news-list__viewport {
+  max-height: 14rem;
+  overflow-y: auto;
+  padding-right: 0.75rem;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.news-list__viewport:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 0.25rem;
 }
 
 .news-list li {

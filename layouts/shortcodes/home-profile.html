@@ -34,13 +34,16 @@
         </aside>
       {{- end }}
     {{- end }}
-    <ol class="news-list">
-      {{- range site.Data.news }}
-        <li>
-          <time datetime="{{ .date }}">{{ time.Format "Jan 2006" .date }}</time>
-          <div>{{ .text | markdownify }}</div>
-        </li>
-      {{- end }}
-    </ol>
+    <p class="console-command news-console-command" aria-hidden="true">$ head -n 5 news.log</p>
+    <div class="news-list__viewport" role="region" aria-label="Recent news" tabindex="0">
+      <ol class="news-list">
+        {{- range first 5 site.Data.news }}
+          <li>
+            <time datetime="{{ .date }}">{{ time.Format "Jan 2006" .date }}</time>
+            <div>{{ .text | markdownify }}</div>
+          </li>
+        {{- end }}
+      </ol>
+    </div>
   </section>
 </section>
