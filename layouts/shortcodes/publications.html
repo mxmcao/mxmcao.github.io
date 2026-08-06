@@ -1,5 +1,5 @@
-{{- $hasEqualContribution := false -}}
-<div class="publications" aria-labelledby="selected-publications-heading">
+<div class="publications" aria-labelledby="publications-heading">
+  <h1 id="publications-heading">Publications</h1>
 
   {{- range site.Data.publications }}
     <section class="publication-year" aria-labelledby="year-{{ .year }}">
@@ -26,25 +26,21 @@
                 {{- range $index, $author := .authors -}}
                   {{- if $index }}, {{ end -}}
                   {{- if $author.self }}<strong>{{ $author.name }}</strong>{{ else }}{{ $author.name }}{{ end -}}
-                  {{- if $author.equal_contribution -}}
-                    {{- $hasEqualContribution = true -}}<sup>*</sup>
-                  {{- end -}}
+                  {{- if $author.equal_contribution }}<sup>*</sup>{{ end -}}
                 {{- end -}}
               </p>
               <p class="publication-venue-name"><em>{{ .venue.name }}</em>, {{ .venue.year }}</p>
               {{ partial "publication-buttons.html" . }}
+              {{- if collections.Where .authors "equal_contribution" true }}
+                <p class="publication-note"><sup>*</sup> Equal contribution</p>
+              {{- end }}
             </div>
           </li>
         {{- end }}
       </ol>
     </section>
   {{- end }}
-  <footer class="publication-footer">
-    {{- if $hasEqualContribution }}
-      <p class="publication-note"><sup>*</sup> Equal contribution</p>
-    {{- end }}
-    {{- with site.Data.citations.metadata.last_updated }}
-      <p class="citation-updated">Citations refreshed <time datetime="{{ . }}">{{ . }}</time>.</p>
-    {{- end }}
-  </footer>
+  {{- with site.Data.citations.metadata.last_updated }}
+    <p class="citation-updated">Citation counts last refreshed: <time datetime="{{ . }}">{{ . }}</time>.</p>
+  {{- end }}
 </div>
