@@ -1,5 +1,46 @@
 - year: 2026
   papers:
+    - id: nanbeige-4-2
+      title: "Nanbeige4.2-3B: Unlocking Agentic Capabilities in a Compact Model"
+      venue:
+        short: Tech Report
+        name: Technical Report
+        year: 2026
+        url: https://arxiv.org/abs/2607.22083
+        color: "#0f766e"
+      authors:
+        - name: Core Contributor
+      preview: /images/publications/nanbeige-4.2.png
+      preview_alt: Nanbeige 4.2 technical report overview
+      links:
+        arxiv: https://arxiv.org/abs/2607.22083
+        huggingface: https://huggingface.co/Nanbeige/Nanbeige4.2-3B
+
+    - id: memory-decoder-at-scale
+      title: "Memory Decoder at Scale: A Pretrained, Parametric Long-Term Memory"
+      venue:
+        short: Preprint
+        name: Preprint
+        year: 2026
+        url: https://arxiv.org/abs/2607.27919
+        color: "#a16207"
+      authors:
+        - name: Rubin Wei
+        - name: Jiaqi Cao
+          self: true
+        - name: Jiarui Wang
+        - name: Junming Zhang
+        - name: Qipeng Guo
+        - name: Bowen Zhou
+        - name: Zhouhan Lin
+      preview: /images/publications/memdec-at-scale.png
+      preview_alt: Memory Decoder at Scale overview
+      links:
+        arxiv: https://arxiv.org/abs/2607.27919
+        code: https://github.com/LUMIA-Group/MemoryDecoder-at-Scale
+        huggingface: https://huggingface.co/collections/Rubin-Wei/memorydecoder-at-scale
+        website: https://rubin-wei.github.io/memory-decoder-at-scale/
+
     - id: mlp-memory
       title: "MLP Memory: A Retriever-Pretrained Memory for Large Language Models"
       venue:

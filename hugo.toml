@@ -91,6 +91,10 @@ copyright = ""
     target = "static"
 
   [[module.mounts]]
+    source = "images"
+    target = "static/images"
+
+  [[module.mounts]]
     source = "prev-information/personal/profile.png"
     target = "static/images/profile.png"
 
