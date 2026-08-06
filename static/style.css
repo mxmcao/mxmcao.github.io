@@ -353,6 +353,24 @@ body {
   margin-top: 2rem;
 }
 
+.academic-page-header__title {
+  border-bottom: 1px dotted var(--border);
+  color: var(--foreground);
+}
+
+.academic-page-header__title::after {
+  display: none;
+}
+
+.academic-page-header__prompt {
+  margin-right: 0.55rem;
+  color: var(--accent);
+}
+
+.academic-page-header__title-link {
+  color: inherit;
+}
+
 .academic-page-header__title .publication-page__scholar {
   margin-left: 0.85rem;
   color: var(--muted);
