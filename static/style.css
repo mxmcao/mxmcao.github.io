@@ -429,42 +429,6 @@ body {
   margin-top: 0;
 }
 
-.cv-contact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 0.55rem;
-  align-items: baseline;
-  margin: 0.9rem 0 2.3rem;
-  color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.5;
-}
-
-.cv-contact__prompt {
-  color: var(--accent);
-  font-weight: bold;
-}
-
-.cv-contact__separator {
-  color: var(--border);
-}
-
-.cv-contact__label {
-  color: var(--accent);
-  font-weight: bold;
-}
-
-.cv-contact__item a {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent);
-  text-underline-offset: 0.16em;
-}
-
-.cv-contact__item a:hover {
-  color: var(--accent);
-}
-
 .cv-sections {
   display: grid;
   gap: 2.5rem;
@@ -488,7 +452,6 @@ body {
   font-size: 1.04rem;
   font-weight: bold;
   letter-spacing: 0.02em;
-  text-transform: lowercase;
 }
 
 .cv-section__prompt {
@@ -532,11 +495,18 @@ body {
 }
 
 .cv-entry__body h3,
-.cv-publication__body h3 {
+.cv-entry__body h3 {
   margin: 0;
   color: var(--foreground);
   font-size: 0.96rem;
   line-height: 1.4;
+}
+
+.cv-publication__body h3 {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 0.86rem;
+  line-height: 1.35;
 }
 
 .cv-entry__body h3 a,
@@ -1034,10 +1004,6 @@ body.dark-mode .publication-button--citations {
 
   .publication-toolbar {
     justify-content: flex-start;
-  }
-
-  .cv-contact {
-    margin-bottom: 1.8rem;
   }
 
   .cv-sections {

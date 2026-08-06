@@ -3,26 +3,11 @@
   {{ partial "academic-page-header.html" (dict "page" . "id" "cv-heading") }}
 
   {{ with site.Data.cv }}
-    <div class="cv-contact" aria-label="Contact information">
-      <span class="cv-contact__prompt">$</span>
-      {{ range $index, $item := .contact }}
-        {{ if $index }}<span class="cv-contact__separator" aria-hidden="true">·</span>{{ end }}
-        <span class="cv-contact__item">
-          <span class="cv-contact__label">{{ $item.label }}:</span>
-          {{ with $item.url }}
-            <a href="{{ . | safeURL }}"{{ if strings.HasPrefix . "https://" }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ $item.value }}</a>
-          {{ else }}
-            <span>{{ $item.value }}</span>
-          {{ end }}
-        </span>
-      {{ end }}
-    </div>
-
     <div class="cv-sections">
       <section class="cv-section" aria-labelledby="cv-education-heading">
         <div class="cv-section__heading">
           <span class="cv-section__prompt" aria-hidden="true">&gt;_</span>
-          <h2 id="cv-education-heading">education</h2>
+          <h2 id="cv-education-heading">Education</h2>
           <span class="cv-section__rail" aria-hidden="true"></span>
         </div>
         <div class="cv-entry-list">
@@ -43,7 +28,7 @@
       <section class="cv-section" aria-labelledby="cv-publications-heading">
         <div class="cv-section__heading">
           <span class="cv-section__prompt" aria-hidden="true">&gt;_</span>
-          <h2 id="cv-publications-heading">publications</h2>
+          <h2 id="cv-publications-heading">Publications</h2>
           <span class="cv-section__rail" aria-hidden="true"></span>
         </div>
         <ol class="cv-publication-list">
@@ -73,7 +58,7 @@
       <section class="cv-section" aria-labelledby="cv-experience-heading">
         <div class="cv-section__heading">
           <span class="cv-section__prompt" aria-hidden="true">&gt;_</span>
-          <h2 id="cv-experience-heading">experience</h2>
+          <h2 id="cv-experience-heading">Experience</h2>
           <span class="cv-section__rail" aria-hidden="true"></span>
         </div>
         <div class="cv-entry-list cv-entry-list--experience">
@@ -93,7 +78,7 @@
         <section class="cv-section" aria-labelledby="cv-awards-heading">
           <div class="cv-section__heading">
             <span class="cv-section__prompt" aria-hidden="true">&gt;_</span>
-            <h2 id="cv-awards-heading">awards &amp; honors</h2>
+            <h2 id="cv-awards-heading">Awards &amp; Honors</h2>
             <span class="cv-section__rail" aria-hidden="true"></span>
           </div>
           <ul class="cv-compact-list cv-award-list">
@@ -106,7 +91,7 @@
         <section class="cv-section" aria-labelledby="cv-skills-heading">
           <div class="cv-section__heading">
             <span class="cv-section__prompt" aria-hidden="true">&gt;_</span>
-            <h2 id="cv-skills-heading">skills</h2>
+            <h2 id="cv-skills-heading">Skills</h2>
             <span class="cv-section__rail" aria-hidden="true"></span>
           </div>
           <ul class="cv-compact-list cv-skills-list">

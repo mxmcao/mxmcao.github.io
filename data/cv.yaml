@@ -1,16 +1,3 @@
-contact:
-  - label: phone
-    value: (+86) 177-8839-9523
-    url: tel:+8617788399523
-  - label: email
-    value: maximus.cao@outlook.com
-    url: mailto:maximus.cao@outlook.com
-  - label: homepage
-    value: mxmcao.github.io
-    url: https://mxmcao.github.io/
-  - label: wechat
-    value: "@maxmcao"
-
 education:
   - institution: Shanghai Jiao Tong University
     degree: M.E.
