@@ -10,6 +10,7 @@
         color: "#0f766e"
       authors:
         - name: Core Contributor
+          self: true
       preview: /images/publications/nanbeige-4.2.png
       preview_alt: Nanbeige 4.2 technical report overview
       links:
@@ -23,7 +24,7 @@
         name: Preprint
         year: 2026
         url: https://arxiv.org/abs/2607.27919
-        color: "#a16207"
+        color: "#6d28d9"
       authors:
         - name: Rubin Wei
         - name: Jiaqi Cao
