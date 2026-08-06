@@ -4,8 +4,7 @@
     <div class="home-profile__copy">
       <h1 id="about-heading">Hi, I'm {{ $profile.name }}. <span class="home-profile__alias">Call me {{ $profile.preferred_name }}.</span></h1>
       <p class="home-profile__headline">
-        {{ $profile.headline }} ·
-        <a href="{{ $profile.affiliation.url }}" rel="noopener noreferrer">{{ $profile.affiliation.label }}</a>
+        {{ $profile.headline | markdownify }}
       </p>
       {{- range $profile.about }}
         {{ . | markdownify }}
