@@ -1,8 +1,7 @@
 {{- $profile := site.Data.profile -}}
 <section class="home-profile" aria-labelledby="about-heading">
-  <div class="home-profile__intro">
+  <div class="home-profile__intro home-profile__block">
     <div class="home-profile__copy">
-      <p class="console-command" aria-hidden="true">$ cat about.md</p>
       <h1 id="about-heading">Hi, I'm {{ $profile.name }}. <span class="home-profile__alias">Call me {{ $profile.preferred_name }}.</span></h1>
       <p class="home-profile__headline">
         {{ $profile.headline }} ·
@@ -17,8 +16,7 @@
     </figure>
   </div>
 
-  <section aria-labelledby="interests-heading">
-    <p class="console-command" aria-hidden="true">$ cat research-interests.md</p>
+  <section class="home-profile__block" aria-labelledby="interests-heading">
     <h2 id="interests-heading">Research interests</h2>
     <ul class="research-interests">
       {{- range $profile.research_interests }}
@@ -27,8 +25,7 @@
     </ul>
   </section>
 
-  <section aria-labelledby="connect-heading">
-    <p class="console-command" aria-hidden="true">$ finger mxmcao</p>
+  <section class="home-profile__block" aria-labelledby="connect-heading">
     <h2 id="connect-heading">Let's connect</h2>
     {{ $profile.closing | markdownify }}
     <ul class="social-links" aria-label="Contact and academic profiles">
@@ -41,8 +38,7 @@
     </ul>
   </section>
 
-  <section class="news" aria-labelledby="news-heading">
-    <p class="console-command" aria-hidden="true">$ tail -n 3 news.log</p>
+  <section class="news home-profile__block" aria-labelledby="news-heading">
     <h2 id="news-heading">Recent news</h2>
     {{- with $profile.job_banner }}
       {{- if .enabled }}
