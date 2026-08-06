@@ -1,12 +1,26 @@
-<div class="publications" aria-labelledby="publications-heading">
-  <h1 id="publications-heading">Publications</h1>
+<div class="publications" aria-labelledby="selected-publications-heading" data-publication-sorter>
+  <div class="publication-toolbar">
+    <div class="publication-sort" role="group" aria-label="Sort selected publications">
+      <button class="publication-sort__button is-active" type="button" data-publication-sort="year" aria-pressed="true">Year</button>
+      <button class="publication-sort__button" type="button" data-publication-sort="citations" aria-pressed="false">Citations</button>
+    </div>
+    <span class="publication-sort__status" data-publication-sort-status aria-live="polite">Sorted by year.</span>
+  </div>
 
+  <div class="publication-year-groups" data-publication-year-groups>
   {{- range site.Data.publications }}
+    {{- $year := .year -}}
     <section class="publication-year" aria-labelledby="year-{{ .year }}">
       <h2 id="year-{{ .year }}">{{ .year }}</h2>
       <ol class="publication-list">
         {{- range .papers }}
-          <li class="publication-item" id="{{ .id }}">
+          {{- $citationCount := 0 -}}
+          {{- with .scholar_id -}}
+            {{- with index site.Data.citations.papers . -}}
+              {{- $citationCount = .citations -}}
+            {{- end -}}
+          {{- end -}}
+          <li class="publication-item" id="{{ .id }}" data-publication-year="{{ $year }}" data-publication-citations="{{ $citationCount }}">
             <div class="publication-preview">
               <a href="{{ .links.arxiv }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ .title }} on arXiv">
                 <img src="{{ .preview | relURL }}" alt="{{ .preview_alt }}" loading="lazy">
@@ -40,6 +54,8 @@
       </ol>
     </section>
   {{- end }}
+  </div>
+  <ol class="publication-list publication-list--citations" data-publication-citation-list hidden></ol>
   {{- with site.Data.citations.metadata.last_updated }}
     <p class="citation-updated">Citation counts last refreshed: <time datetime="{{ . }}">{{ . }}</time>.</p>
   {{- end }}
