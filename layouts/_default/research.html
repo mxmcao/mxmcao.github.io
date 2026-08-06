@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article class="post publication-page">
+  <header class="publication-page__header">
+    <h1 class="publication-page__title" id="selected-publications-heading">{{ .Title | markdownify }}</h1>
+    <p class="publication-page__scholar">
+      All publications on
+      <a
+        href="https://scholar.google.com/citations?user={{ site.Data.citations.scholar_user_id }}&amp;hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Google Scholar</a>.
+    </p>
+  </header>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}
