@@ -473,7 +473,7 @@ body {
 
 .cv-entry {
   display: grid;
-  grid-template-columns: minmax(8.5rem, 17%) minmax(0, 1fr);
+  grid-template-columns: minmax(11.5rem, 22%) minmax(0, 1fr);
   gap: 1rem;
   margin: 0;
   padding: 0 0 0.9rem;
@@ -492,6 +492,10 @@ body {
   font-size: 0.76rem;
   font-weight: bold;
   line-height: 1.45;
+}
+
+.cv-entry__period {
+  white-space: nowrap;
 }
 
 .cv-entry__body h3,
