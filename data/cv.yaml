@@ -1,0 +1,70 @@
+contact:
+  - label: phone
+    value: (+86) 177-8839-9523
+    url: tel:+8617788399523
+  - label: email
+    value: maximus.cao@outlook.com
+    url: mailto:maximus.cao@outlook.com
+  - label: homepage
+    value: mxmcao.github.io
+    url: https://mxmcao.github.io/
+  - label: wechat
+    value: "@maxmcao"
+
+education:
+  - institution: Shanghai Jiao Tong University
+    degree: M.E.
+    period: Sep 2024 – Present
+    details:
+      - GPA 3.79 / 4.0
+      - "Expected graduation: Mar 2027"
+  - institution: Shanghai Jiao Tong University
+    degree: B.E.
+    period: Sep 2020 – Jun 2024
+    details:
+      - GPA 3.86 / 4.0
+      - Dean’s Scholarship · Rank 1/86 · $7,500
+
+experience:
+  - organization: IQuest Research
+    role: Pre-train Intern
+    period: Jul 2026 – Present
+    url: https://huggingface.co/IQuestLab
+    focus: Pre-training research for foundation models.
+  - organization: NBG Lab
+    role: Research Intern
+    period: Mar 2026 – Jun 2026
+    url: https://huggingface.co/Nanbeige
+    focus: Compact language models and agentic capabilities.
+  - organization: Shanghai AI Lab
+    role: Research Intern
+    period: Apr 2025 – Aug 2025
+    url: https://www.shlab.org.cn/
+    focus: Parametric memory and continual learning for LLMs.
+  - organization: Microsoft Cloud + AI (C+AI)
+    role: LLM Algorithm Intern
+    period: Mar 2024 – Aug 2024
+    url: https://www.microsoft.com/en-us/aprd/aboutus/team-cai
+    focus: AKS diagnostic copilot and RAG retrieval optimization.
+
+awards:
+  - title: Dean’s Scholarship
+    detail: Rank 1/86 · highest departmental scholarship · $7,500
+    period: Sep 2023
+  - title: VEX Robotics World Championship Champion
+    detail: Team Captain
+    period: Apr 2023
+  - title: Mathematical Contest in Modeling (MCM)
+    detail: Meritorious Winner
+    period: Jan 2021
+  - title: National Olympiad in Informatics in Provinces (NOIP)
+    detail: First Prize
+    period: Nov 2018
+
+skills:
+  - label: Languages
+    value: English (TOEFL 109)
+  - label: Programming
+    value: Python · C/C++
+  - label: ML stack
+    value: PyTorch · Transformers · FAISS · RAG architectures

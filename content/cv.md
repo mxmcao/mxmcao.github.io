@@ -1,7 +1,5 @@
 +++
 title = "CV"
-layout = "academic"
+layout = "cv"
 description = "Curriculum vitae of Jiaqi Cao."
 +++
-
-The previous CV has been archived and is intentionally not published by this minimal site.

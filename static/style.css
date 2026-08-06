@@ -425,6 +425,251 @@ body {
   vertical-align: middle;
 }
 
+.cv-page .post-content {
+  margin-top: 0;
+}
+
+.cv-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.55rem;
+  align-items: baseline;
+  margin: 0.9rem 0 2.3rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.cv-contact__prompt {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.cv-contact__separator {
+  color: var(--border);
+}
+
+.cv-contact__label {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.cv-contact__item a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent);
+  text-underline-offset: 0.16em;
+}
+
+.cv-contact__item a:hover {
+  color: var(--accent);
+}
+
+.cv-sections {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.cv-section {
+  min-width: 0;
+}
+
+.cv-section__heading {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+
+.cv-section__heading h2 {
+  margin: 0;
+  color: var(--foreground);
+  font-family: inherit;
+  font-size: 1.04rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+}
+
+.cv-section__prompt {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: bold;
+}
+
+.cv-section__rail {
+  flex: 1 1 auto;
+  min-width: 1.5rem;
+  border-top: 1px dashed var(--border);
+}
+
+.cv-entry-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.cv-entry {
+  display: grid;
+  grid-template-columns: minmax(8.5rem, 17%) minmax(0, 1fr);
+  gap: 1rem;
+  margin: 0;
+  padding: 0 0 0.9rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.cv-entry:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.cv-entry__period,
+.cv-publication__year,
+.cv-compact-list__period {
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: bold;
+  line-height: 1.45;
+}
+
+.cv-entry__body h3,
+.cv-publication__body h3 {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 0.96rem;
+  line-height: 1.4;
+}
+
+.cv-entry__body h3 a,
+.cv-publication__body h3 a {
+  color: inherit;
+  text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent);
+  text-underline-offset: 0.16em;
+}
+
+.cv-entry__body h3 a:hover,
+.cv-publication__body h3 a:hover {
+  color: var(--accent);
+}
+
+.cv-entry__role {
+  color: var(--muted);
+  font-weight: normal;
+}
+
+.cv-entry__body p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.cv-inline-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.9rem;
+  margin: 0.28rem 0 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  list-style: none;
+}
+
+.cv-inline-list li::before {
+  margin-right: 0.35rem;
+  color: var(--accent);
+  content: "//";
+}
+
+.cv-publication-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-publication {
+  display: grid;
+  grid-template-columns: minmax(3.5rem, 7%) minmax(0, 1fr);
+  gap: 1rem;
+  margin: 0;
+  padding: 0 0 0.75rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.cv-publication:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.cv-publication__venue {
+  display: inline-block;
+  margin-left: 0.45rem;
+  padding: 0.07rem 0.35rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.68em;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  vertical-align: 0.12em;
+}
+
+.cv-publication__authors {
+  margin: 0.22rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.cv-publication-note {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
+.cv-publication-note a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.cv-publication-note a:hover {
+  color: var(--accent);
+}
+
+.cv-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: clamp(2rem, 6vw, 4.5rem);
+}
+
+.cv-compact-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-compact-list li {
+  display: grid;
+  grid-template-columns: minmax(4.5rem, max-content) minmax(0, 1fr);
+  gap: 0.8rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.cv-compact-list strong {
+  color: var(--foreground);
+}
+
+.cv-skill-label {
+  color: var(--accent);
+  font-weight: bold;
+}
+
 .publication-page__scholar a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -789,6 +1034,29 @@ body.dark-mode .publication-button--citations {
 
   .publication-toolbar {
     justify-content: flex-start;
+  }
+
+  .cv-contact {
+    margin-bottom: 1.8rem;
+  }
+
+  .cv-sections {
+    gap: 2rem;
+  }
+
+  .cv-entry {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .cv-publication {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .cv-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 

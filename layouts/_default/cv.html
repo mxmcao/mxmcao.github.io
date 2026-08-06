@@ -1,0 +1,122 @@
+{{ define "main" }}
+<article class="post academic-page cv-page">
+  {{ partial "academic-page-header.html" (dict "page" . "id" "cv-heading") }}
+
+  {{ with site.Data.cv }}
+    <div class="cv-contact" aria-label="Contact information">
+      <span class="cv-contact__prompt">$</span>
+      {{ range $index, $item := .contact }}
+        {{ if $index }}<span class="cv-contact__separator" aria-hidden="true">·</span>{{ end }}
+        <span class="cv-contact__item">
+          <span class="cv-contact__label">{{ $item.label }}:</span>
+          {{ with $item.url }}
+            <a href="{{ . | safeURL }}"{{ if strings.HasPrefix . "https://" }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ $item.value }}</a>
+          {{ else }}
+            <span>{{ $item.value }}</span>
+          {{ end }}
+        </span>
+      {{ end }}
+    </div>
+
+    <div class="cv-sections">
+      <section class="cv-section" aria-labelledby="cv-education-heading">
+        <div class="cv-section__heading">
+          <span class="cv-section__prompt" aria-hidden="true">&gt;_</span>
+          <h2 id="cv-education-heading">education</h2>
+          <span class="cv-section__rail" aria-hidden="true"></span>
+        </div>
+        <div class="cv-entry-list">
+          {{ range .education }}
+            <article class="cv-entry">
+              <div class="cv-entry__period">{{ .period }}</div>
+              <div class="cv-entry__body">
+                <h3>{{ .institution }} <span class="cv-entry__role">· {{ .degree }}</span></h3>
+                <ul class="cv-inline-list">
+                  {{ range .details }}<li>{{ . }}</li>{{ end }}
+                </ul>
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      </section>
+
+      <section class="cv-section" aria-labelledby="cv-publications-heading">
+        <div class="cv-section__heading">
+          <span class="cv-section__prompt" aria-hidden="true">&gt;_</span>
+          <h2 id="cv-publications-heading">publications</h2>
+          <span class="cv-section__rail" aria-hidden="true"></span>
+        </div>
+        <ol class="cv-publication-list">
+          {{ range site.Data.publications }}
+            {{ range .papers }}
+              <li class="cv-publication">
+                <div class="cv-publication__year">{{ .venue.year }}</div>
+                <div class="cv-publication__body">
+                  <h3>
+                    {{ with .links.arxiv }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ end }}{{ .title }}{{ with .links.arxiv }}</a>{{ end }}
+                    <span class="cv-publication__venue">{{ .venue.short }}</span>
+                  </h3>
+                  <p class="cv-publication__authors">
+                    {{ range $index, $author := .authors }}
+                      {{ if $index }}, {{ end }}
+                      {{ if $author.self }}<strong>{{ $author.name }}</strong>{{ else }}{{ $author.name }}{{ end }}{{ if $author.equal_contribution }}<sup>*</sup>{{ end }}
+                    {{ end }}
+                  </p>
+                </div>
+              </li>
+            {{ end }}
+          {{ end }}
+        </ol>
+        <p class="cv-publication-note"><sup>*</sup> Equal contribution · selected works and links on <a href="{{ "/research/" | relURL }}">Research</a>.</p>
+      </section>
+
+      <section class="cv-section" aria-labelledby="cv-experience-heading">
+        <div class="cv-section__heading">
+          <span class="cv-section__prompt" aria-hidden="true">&gt;_</span>
+          <h2 id="cv-experience-heading">experience</h2>
+          <span class="cv-section__rail" aria-hidden="true"></span>
+        </div>
+        <div class="cv-entry-list cv-entry-list--experience">
+          {{ range .experience }}
+            <article class="cv-entry">
+              <div class="cv-entry__period">{{ .period }}</div>
+              <div class="cv-entry__body">
+                <h3>{{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ end }}{{ .organization }}{{ with .url }}</a>{{ end }} <span class="cv-entry__role">· {{ .role }}</span></h3>
+                <p>{{ .focus }}</p>
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      </section>
+
+      <div class="cv-columns">
+        <section class="cv-section" aria-labelledby="cv-awards-heading">
+          <div class="cv-section__heading">
+            <span class="cv-section__prompt" aria-hidden="true">&gt;_</span>
+            <h2 id="cv-awards-heading">awards &amp; honors</h2>
+            <span class="cv-section__rail" aria-hidden="true"></span>
+          </div>
+          <ul class="cv-compact-list cv-award-list">
+            {{ range .awards }}
+              <li><span class="cv-compact-list__period">{{ .period }}</span><span><strong>{{ .title }}</strong> · {{ .detail }}</span></li>
+            {{ end }}
+          </ul>
+        </section>
+
+        <section class="cv-section" aria-labelledby="cv-skills-heading">
+          <div class="cv-section__heading">
+            <span class="cv-section__prompt" aria-hidden="true">&gt;_</span>
+            <h2 id="cv-skills-heading">skills</h2>
+            <span class="cv-section__rail" aria-hidden="true"></span>
+          </div>
+          <ul class="cv-compact-list cv-skills-list">
+            {{ range .skills }}
+              <li><span class="cv-skill-label">{{ .label }}</span><span>{{ .value }}</span></li>
+            {{ end }}
+          </ul>
+        </section>
+      </div>
+    </div>
+  {{ end }}
+</article>
+{{ end }}
