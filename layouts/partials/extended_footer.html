@@ -1,2 +1,4 @@
 {{ $themeToggle := resources.Get "js/theme-toggle.js" | js.Build | minify | fingerprint }}
+{{ $wechatDialog := resources.Get "js/wechat-dialog.js" | js.Build | minify | fingerprint }}
 <script src="{{ $themeToggle.RelPermalink }}" integrity="{{ $themeToggle.Data.Integrity }}"></script>
+<script src="{{ $wechatDialog.RelPermalink }}" integrity="{{ $wechatDialog.Data.Integrity }}"></script>

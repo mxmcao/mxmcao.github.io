@@ -96,10 +96,13 @@ body {
   justify-content: center;
   width: 1.75rem;
   height: 1.75rem;
+  padding: 0;
   border: 1px solid transparent;
   border-radius: 0;
   color: var(--muted);
+  background: transparent;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .header-socials__link svg {
@@ -116,6 +119,80 @@ body {
 .header-socials__link:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+.wechat-dialog {
+  box-sizing: border-box;
+  width: min(16.25rem, calc(100vw - 2rem));
+  max-width: none;
+  max-height: calc(100vh - 2rem);
+  margin: auto;
+  padding: 0.65rem;
+  border: 1px solid var(--accent);
+  border-radius: 0;
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.wechat-dialog:not([open]) {
+  display: none;
+}
+
+.wechat-dialog::backdrop {
+  background: color-mix(in srgb, var(--foreground) 55%, transparent);
+}
+
+.wechat-dialog__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.55rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.wechat-dialog__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+}
+
+.wechat-dialog__close svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.wechat-dialog__close:hover {
+  border-color: var(--accent);
+  color: var(--background);
+  background: var(--accent);
+}
+
+.wechat-dialog__close:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.wechat-dialog img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 5rem);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  object-fit: contain;
 }
 
 .index-content {

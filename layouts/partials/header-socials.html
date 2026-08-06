@@ -2,6 +2,9 @@
   <ul class="header-socials" aria-label="Contact and academic profiles">
     {{- range . }}
       <li>
+        {{- if eq .label "WeChat" }}
+          <button class="header-socials__link" type="button" data-wechat-dialog-open aria-haspopup="dialog" aria-controls="wechat-dialog" aria-label="Open WeChat QR code" title="WeChat QR code">{{ partial "social-icon.html" . }}</button>
+        {{- else }}
         <a
           class="header-socials__link"
           href="{{ .url | safeURL }}"
@@ -9,7 +12,20 @@
           title="{{ .label }}"
           {{- if strings.HasPrefix .url "https://" }} target="_blank" rel="noopener noreferrer"{{ end -}}
         >{{ partial "social-icon.html" . }}</a>
+        {{- end }}
       </li>
     {{- end }}
   </ul>
 {{- end -}}
+
+<dialog id="wechat-dialog" class="wechat-dialog" data-wechat-dialog aria-labelledby="wechat-dialog-title">
+  <div class="wechat-dialog__header">
+    <span id="wechat-dialog-title">&gt;_ WeChat</span>
+    <button class="wechat-dialog__close" type="button" data-wechat-dialog-close aria-label="Close WeChat QR code" title="Close">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M18 6 6 18M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <img src="{{ "images/wechat.png" | relURL }}" alt="WeChat QR code for adding Max Cao as a friend" width="820" height="1219">
+</dialog>
