@@ -1,0 +1,14 @@
+{{- $page := .page -}}
+<header class="academic-page-header">
+  <div class="academic-page-header__title-row">
+    <span class="academic-page-header__prompt" aria-hidden="true">&gt;_</span>
+    <h1 class="academic-page-header__title" id="{{ .id }}">{{ $page.Title | markdownify }}</h1>
+    {{- with .supplementURL }}
+      <p class="academic-page-header__supplement">
+        {{ $.supplementText }}
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $.supplementLabel }}</a>.
+      </p>
+    {{- end }}
+  </div>
+  <div class="academic-page-header__divider" aria-hidden="true"><span></span></div>
+</header>

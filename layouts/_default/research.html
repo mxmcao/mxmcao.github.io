@@ -1,30 +1,13 @@
 {{ define "main" }}
-<article class="post publication-page">
-  <h1 class="post-title publication-page__title" id="selected-publications-heading">
-    <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-    <span class="publication-page__scholar">
-      All publications on
-      <a
-        href="https://scholar.google.com/citations?user={{ site.Data.citations.scholar_user_id }}&amp;hl=en"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Google Scholar</a>.
-    </span>
-  </h1>
-
-  <div class="post-meta">
-    {{- if .Date -}}
-      <time class="post-date">
-        {{- partial "post-date" . -}}
-        {{- if and $.Site.Params.showLastUpdated .Lastmod -}}
-          &nbsp;{{- partial "post-lastmod" . -}}
-        {{- end -}}
-      </time>
-    {{- end -}}
-    {{- with .Params.Author -}}
-      <span class="post-author">{{ . }}</span>
-    {{- end -}}
-  </div>
+{{- $scholarURL := printf "https://scholar.google.com/citations?user=%s&hl=en" site.Data.citations.scholar_user_id -}}
+<article class="post publication-page academic-page">
+  {{ partial "academic-page-header.html" (dict
+    "page" .
+    "id" "selected-publications-heading"
+    "supplementText" "All publications on"
+    "supplementURL" $scholarURL
+    "supplementLabel" "Google Scholar"
+  ) }}
 
   <div class="post-content">
     {{- with .Content -}}

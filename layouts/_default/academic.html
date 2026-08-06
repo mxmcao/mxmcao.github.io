@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article class="post academic-page">
+  {{ partial "academic-page-header.html" (dict "page" . "id" "cv-heading") }}
+
+  <div class="post-content">
+    {{- with .Content -}}
+      <div>
+        {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">#</a> ${3}` | safeHTML }}
+      </div>
+    {{- end -}}
+  </div>
+</article>
+{{ end }}
