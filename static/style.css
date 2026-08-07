@@ -362,8 +362,10 @@ body {
 }
 
 .home-profile__portrait img {
+  display: block;
   width: 100%;
   height: auto;
+  margin: 0;
   aspect-ratio: 1;
   object-fit: cover;
   padding: 0;
