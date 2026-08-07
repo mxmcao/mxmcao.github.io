@@ -420,7 +420,7 @@ body {
 }
 
 .news-list__viewport {
-  max-height: 14rem;
+  max-height: 28rem;
   overflow-y: auto;
   padding-right: 0.75rem;
   overscroll-behavior: contain;
